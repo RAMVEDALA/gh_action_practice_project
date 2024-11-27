@@ -52,8 +52,11 @@ jobs:
       uses:  davelosert/vitest-coverage-report-action@v2
       with:
         # The path to the generated coverage-summary.json file
-        jsonSummaryPath: ./coverage/coverage-summary.json
-        jsonFinalPath: ./coverage/coverage-final.json
+        json-summary-path: ./coverage/coverage-summary.json
+        json-final-path: ./coverage/coverage-final.json
+        file-coverage-mode: "changes"  # This will only show coverage for changed files
+        file-coverage-root-path: .      # Path to the root of the repository
+        working-directory: ./           # Working directory, adjust if necessary
 
   build:
     name: build application
