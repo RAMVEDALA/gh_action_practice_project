@@ -16,4 +16,4 @@ export default defineConfig({
       include: ['src/**/*.js'],  // Files to include in coverage
       exclude: ['node_modules', 'test/**', 'src/test/**'], // Files to exclude
   },
-});
+}});
