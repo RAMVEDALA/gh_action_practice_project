@@ -50,6 +50,10 @@ jobs:
       # Only works if you set `reportOnFailure: true` in your vite config as specified above
       if: always() 
       uses:  davelosert/vitest-coverage-report-action@v2
+      with:
+        # The path to the generated coverage-summary.json file
+        jsonSummaryPath: ./coverage/coverage-summary.json
+        jsonFinalPath: ./coverage/coverage-final.json
 
   build:
     name: build application
