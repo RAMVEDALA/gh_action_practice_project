@@ -14,8 +14,9 @@ jobs:
             node-version: 18
 
       - name: Install Node.js dependencies
-        run: npm install --save-dev eslint prettier eslint-config-prettier eslint-plugin-prettier
-        run: npm ci       #this will take of specific versions being installed as per package-lock.json, without causing any issues
+        run: |
+          npm install --save-dev eslint prettier eslint-config-prettier eslint-plugin-prettier
+          npm ci       #this will take of specific versions being installed as per package-lock.json, without causing any issues
 
       - name: run linters
         uses: wearerequired/lint-action@v2
